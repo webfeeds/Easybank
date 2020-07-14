@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link href="https://fonts.google.com/specimen/Public+Sans" rel="stylesheet" type="text/css" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Easybank landing page</title>
+<style>
+*{
+margin:0;
+padding:0;
+overflow-x:hidden;
+}
+.top-header{
+display:flex;
+flex-direction:row;
+justify-content:space-around;
+background-color:hsl(0, 0%, 100%);
+width:100%;
+position:fixed;
+z-index:400;
+}
+.logo{
+padding:20px 0;
+margin-top:5px;
+}
+ul{
+list-style-type:none;
+overflow:hidden;
+margin-top:5px;
+}
+ul li{
+float:left;
+}
+ul li a{
+display:block;
+text-decoration:none;
+text-align:center;
+padding:20px 8px;
+color:hsl(233, 8%, 62%);
+font-family: Public Sans;
+opacity:0.7;
+}
+ul li a:hover{
+border-bottom:3px solid hsl(233, 8%, 62%);
+}
+button{
+background:linear-gradient(to left,hsl(233, 8%, 62%),hsl(136, 65%, 51%));
+padding:10px 16px;
+color:white;
+border:none;
+border-radius:20px;
+margin-top:20px;
+}
+.section-1{
+display:flex;
+flex-direction:row;
+width:100%;
+height:100vh;
+background-color:hsl(0, 0%, 98%);
+}
+.section-1 .text{
+width:40%;
+height:100%;
+display:flex;
+flex-direction:column;
+justify-content:center;
+text-align:left;
+align-items:center;
+padding-left:200px;
+font-family: Public Sans;
+}
+h1{
+font-size:50px;
+margin-bottom:20px;
+color:hsl(233, 26%, 24%);
+font-weight:300;
+}
+p{
+line-height:25px;
+color:hsl(233, 8%, 62%);
+font-weight:300;
+}
+.intro-img{
+width:90%;
+height:100%;
+max-height:100%;
+z-index:6;
+}
+.intro-img .introImg{
+position:absolute;
+height:800px;
+width:600px;
+top:-100px;
+right:-100px;
+}
+.intro-img:after{
+content:"";
+position:absolute;
+top:-200px;
+right:-100px;
+background-image:url("./images/bg-intro-desktop.svg");
+height:780px;
+width:800px;
+z-index:-3;
+}
+
+/* ---------------------------------------------------------------- */
+
+.section-2{
+padding-left:200px;
+background-color:white;
+}
+h3{
+margin-top:40px;
+font-size:30px;
+color:hsl(233, 26%, 24%);
+font-weight:300;
+margin-bottom:20px;
+}
+.item .p{
+font-weight:300;
+}
+
+.inner-section{
+display:flex;
+flex-direction:row;
+}
+.item{
+width:20%;
+margin-right:35px;
+margin-bottom:60px;
+}
+
+.item img{
+margin-top:40px;
+margin-bottom:20px;
+width:60px;
+}
+
+.section-2 .inner-section .item h4{
+font-size:20px;
+margin-bottom:20px;
+color:hsl(233, 26%, 24%);
+font-weight:300;
+}
+
+/* --------------------------------------- */
+.section-3{
+padding-left:200px;
+background-color:hsl(0, 0%, 98%);
+}
+
+.section-3 .item{
+background-color:white;
+margin-top:40px;
+margin-bottom:60px;
+}
+.section-3 .item img{
+margin-bottom:20px;
+width:100%;
+height:170px;
+margin-top:0;
+}
+
+.section-3 .item a{
+font-size:10px;
+color:color:hsl(233, 8%, 62%);
+opacity:0.6;
+}
+
+.section-3 .item h4{
+margin-bottom:10px;
+margin-top:10px;
+font-size:20px;
+color:hsl(233, 26%, 24%);
+font-weight:500;
+}
+
+.section-3 .item p{
+line-height:20px;
+}
+
+/* ---------------------------------------- */
+footer{
+background-color:hsl(233, 26%, 24%);
+height:160px;
+width:100%;
+}
+.footer-content{
+padding:30px 200px 30px 200px;
+display:flex;
+flex-direction:row;
+color:white;
+justify-content:space-between;
+}
+.footer-content .column .row img{
+position:relative;
+}
+.footer-content .column .row h4{
+position:absolute;
+font-size:25px;
+left:230px;
+margin-top:-5px;
+font-weight:bold;
+}
+.row{
+display:flex;
+flex-direction:row;
+}
+.column{
+display:flex;
+flex-direction:column;
+}
+
+.space{
+margin-top:50px;
+}
+.space img{
+padding-right:10px;
+}
+
+.lastcolumn{
+margin-left:100px;
+}
+
+.footer-content a{
+margin-bottom:15px;
+}
+.footer-content button{
+margin-top:0;
+margin-bottom:30px;
+padding:10px 0px;
+width:60%;
+margin-left:75px;
+}
+
+.footer-content .lastcolumn a{
+font-size:15px;
+font-weight:300;
+color:hsl(233, 8%, 62%);
+opacity:0.7;
+}
+</style>
+</head>
+<body>
+	<div class="top-header">
+	    <div class="logo"><img src="./images/logo.svg"></div>
+		  <ul>
+		     <li><a href="#">Home</a></li>
+			 <li><a href="#">About</a></li>
+			 <li><a href="#">Contact</a></li>
+			 <li><a href="#">Blog</a></li>
+			 <li><a href="#">Careers</a></li>
+		  </ul>
+        <div class="button">
+           <button>Request Invite</button>
+        </div>	
+	</div>
+	<div class="section-1">
+	  <div class="text">
+	  <div class="text1">
+	  <h1>Next generation digital banking</h1>
+	  <p>Take your financial life online.Your Easybank account will be a one-stop for spending, saving, budgeting, investing and much more.</p>
+	  <button>Request Invite</button>
+	  </div>
+	  </div>
+	  <div class="intro-img">
+	     <img src="./images/image-mockups.png" class="introImg">
+	  </div>
+	</div>
+	<div class="section-2">
+	<h3>Why choose Easybank?</h3>
+	<p>we leverage open banking to turn your bank account into your financial hub.<br>Control your finances like never before.</p>
+	<div class="inner-section">
+		<div class="item">
+		  <img src="./images/icon-online.svg">
+		  <h4>Online Banking</h4>
+		  <p>our modern mobile and web application allows you to keep track of all your finances whereever you are in the world</p>
+		</div> 
+		<div class="item">
+		  <img src="./images/icon-budgeting.svg">
+		  <h4>Online Banking</h4>
+		  <p>our modern mobile and web application allows you to keep track of all your finances whereever you are in the world</p>
+		</div> 
+		<div class="item">
+		  <img src="./images/icon-onboarding.svg">
+		  <h4>Online Banking</h4>
+		  <p>our modern mobile and web application allows you to keep track of all your finances whereever you are in the world</p>
+		</div> 
+		<div class="item">
+		  <img src="./images/icon-api.svg">
+		  <h4>Online Banking</h4>
+		  <p>our modern mobile and web application allows you to keep track of all your finances whereever you are in the world</p>
+		</div> 
+	</div>
+	</div>
+	<div class="section-3">
+	<h3>Latest Articles</h3>
+	<div class="inner-section">
+		<div class="item">
+		  <img src="./images/image-currency.jpg">
+		  <a>By Claire Robinson</a>
+		  <h4>Receive money in any currency with no fee</h4>
+		  <p>The world is getting smaller and we getting more mobile.So why you should be forced to only receive money in single...</p>
+		</div> 
+		<div class="item">
+		  <img src="./images/image-restaurant.jpg">
+		  <a>By Wilson Gutton</a>
+		  <h4>Treat yourself without worrying about money</h4>
+		  <p>The world is getting smaller and we getting more mobile.So why you should be forced to only receive money in single...</p>
+		</div> 
+		<div class="item">
+		  <img src="./images/image-plane.jpg">
+		  <a>By Claire Robinson</a>
+		  <h4>Take your Easybank card where ever you go</h4>
+		  <p>The world is getting smaller and we getting more mobile.So why you should be forced to only receive money in single...</p>
+		</div> 
+		<div class="item">
+		  <img src="./images/image-confetti.jpg">
+		  <a>By Wilson gutton</a>
+		  <h4>Our invite-only beta accounts are live now!</h4>
+		  <p>The world is getting smaller and we getting more mobile.So why you should be forced to only receive money in single...</p>
+		</div> 
+	</div>
+	</div>
+	<footer>
+	  <div class="footer-content">
+		<div class="column">
+		  <div class="row">
+		     <img src="./images/logo.svg">
+			 <h4>easybank</h4>
+		  </div>
+		  <div class="row space">
+		     <img src="./images/icon-facebook.svg">
+			 <img src="./images/icon-youtube.svg">
+			 <img src="./images/icon-twitter.svg">
+			 <img src="./images/icon-pinterest.svg">
+			 <img src="./images/icon-instagram.svg">
+		  </div>	 
+	  </div>
+	  <div class="column">
+	    <a>About us</a>
+		<a>Contact</a>
+		<a>Blog</a>
+	  </div>
+	  <div class="column">
+	    <a>Careers</a>
+		<a>Support</a>
+		<a>Privacy policy</a>
+	  </div>
+	  <div class="column lastcolumn">
+	    <button>Request Invite</button>
+		<a>@Easybank.All Rights Reserved</a>
+	  </div>
+	  </div>
+	</footer>
+</body>
+</html>
